@@ -34,7 +34,7 @@ function SearchComponent({ onClose, isOpen }) {
   }
 
   return (
-    <Modal isOpen={isOpen} className="modal-background">
+    <Modal isOpen={isOpen} className="modal-background" ariaHideApp={false}>
       <div className="modal-container">
         <button
           onClick={onClose}
