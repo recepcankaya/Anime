@@ -1,0 +1,97 @@
+@use "../scss/base";
+@import "../scss/mixin.scss";
+
+$details-margin: auto;
+$description-font-weight: 400;
+
+.anime-details-container {
+  @include style;
+  padding: auto;
+  height: 100%;
+  .description {
+    width: 70%;
+    margin: auto;
+    .description-title {
+      font-weight: $description-font-weight;
+    }
+    .background {
+      font-weight: $description-font-weight;
+    }
+  }
+}
+
+.link-container {
+  position: relative;
+  right: 315px;
+  .arrow {
+    width: 16px;
+    height: 16px;
+    margin-right: 7px;
+    margin-bottom: 2px;
+    fill: base.$main-color;
+  }
+  .main-link {
+    text-decoration: none;
+    color: base.$main-color;
+    &:hover {
+      color: base.$secondary-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.secondary-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  position: relative;
+  .details-container {
+    width: 525px;
+    height: 355px;
+    .title {
+      position: absolute;
+    }
+    .secondary-details-container {
+        width: 70%;
+        margin-top: 73px;
+        .details {
+        display: flex;
+        margin-bottom: 15px;
+        .line {
+         height: 1px;
+         background-color: grey;
+         margin: $details-margin;
+        }
+        .feature {
+          margin: $details-margin;
+        }
+        .value {
+          margin: $details-margin;
+        }
+      }
+      .bottom-details {
+          display: flex;
+          gap: 50px;
+          margin-top: 55px;
+          .bottom-title {
+           color: base.$secondary-color;
+           margin-top: -10px;
+          }
+        }
+      }
+  }
+}
+
+
+
+@keyframes textAnimation {
+  0% {
+    left: 0px;
+    top:0px;
+  }
+  100% {
+    left: 3px;
+    top: 3px;
+  }
+}

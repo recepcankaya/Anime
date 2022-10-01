@@ -1,0 +1,80 @@
+$search-bg-color: rgba(218, 215, 215);
+
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  .modal-container {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    height: 85px;
+    width: 50%;
+    transform: translate(-50%, -50%);
+
+    .modal-input {
+      position: fixed;
+      height: 60%;
+      width: 100%;
+      bottom: 5px;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      background-color: $search-bg-color;
+    }
+
+    .modal-input[type=text] {
+      font-size: 1.20rem;
+      padding-left: 20px;
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+    }
+
+    .search-input-container {
+      background-color:$search-bg-color;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      border-radius: 20px;
+
+      .search-input {
+        padding: 10px 0 10px 0;
+        &:hover {
+          background-color: #78a5b3;
+          border-radius: 20px;
+          cursor: pointer;
+        }
+
+        .search-anime-details {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          padding-left: 15px;
+          line-height: 17px;
+          .anime-title {
+            font-weight: 500;
+            font-size: 1.25rem;
+          }
+          
+          .parag {
+            font-size: 1.05rem;
+          }
+          
+          .arrow-right {
+            fill: black;
+            position: absolute;
+            right: 7px;
+            transform: scale(0.75);
+          }
+        }
+      }
+    }
+  }
+}
