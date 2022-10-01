@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Main />} />
+          <Route path="*" element={<Main />} />
           <Route path="/anime-details/:mal_id" element={<AnimeDetails />} />
         </Route>
       </Routes>
