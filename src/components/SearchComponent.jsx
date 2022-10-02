@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 
 import Modal from "react-modal"
 import axios from "axios"
+import debounce from "lodash.debounce"
 
 import "./SearchComponent.scss"
 
@@ -24,6 +25,7 @@ function SearchComponent({ onClose, isOpen }) {
       // console.log(response.data.data)
       setFetchData(response.data.data)
     }
+    if (text === "") return
     fetchAnime()
   }, [text])
 
@@ -32,6 +34,8 @@ function SearchComponent({ onClose, isOpen }) {
   const handleInput = (e) => {
     setText(e.target.value)
   }
+
+  const debouncedInput = debounce(handleInput, 400)
 
   return (
     <Modal isOpen={isOpen} className="modal-background" ariaHideApp={false}>
@@ -48,7 +52,7 @@ function SearchComponent({ onClose, isOpen }) {
           type="text"
           className="modal-input"
           placeholder="You can search for `Kyoukai no Kanata` for example"
-          onChange={handleInput}
+          onChange={debouncedInput}
         />
         <div className="search-input-container" onClick={onClose}>
           {fetchData.map((el) => (
