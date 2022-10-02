@@ -22,11 +22,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-.env
-manifest.json
-robots.txt
-reportWebVitals.js
-setupTests.js
-App.test.js
-package-lock.json
-.gitignore
