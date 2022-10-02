@@ -1,11 +1,11 @@
-import React from "react"
-import axios from "axios"
-import Image from "react-bootstrap/Image"
-
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { ReactComponent as Arrow } from "../icons/circle-arrow-left-solid.svg"
+
+import React from "react"
+import axios from "axios"
+import Image from "react-bootstrap/Image"
 
 import "./AnimeDetails.scss"
 
